@@ -1,0 +1,32 @@
+:host {
+  .container {
+    padding: 25px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    .card {
+      mat-card-title {
+        display: flex;
+        align-items: center;
+        span {
+          padding-right: 8px;
+        }
+      }
+      mat-card-content {
+        padding-top: 16px;
+        .card-content {
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr);
+          gap: 8px;
+          align-items: center;
+          .content-amount {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) repeat(2, auto);
+            align-items: center;
+            gap: 8px;
+          }
+        }
+      }
+    }
+  }
+}

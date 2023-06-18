@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #fafafa;
+}
+
+.content-currency > .mat-mdc-text-field-wrapper > .mat-mdc-form-field-flex > .mat-mdc-form-field-infix {
+  display: flex !important;
+  mat-icon {
+    max-width: 24px !important;
+    width: 100%;
+  }
+}
