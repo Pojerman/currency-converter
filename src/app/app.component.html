@@ -29,16 +29,16 @@
           <mat-form-field  appearance="outline" subscriptSizing="dynamic">
             <input matInput [(ngModel)]="amountValue"  maxlength="12">
           </mat-form-field>
-          <button mat-icon-button (click)="clearAmount()" [disabled]="amountValue === undefined" matTooltip="Удалить значение">
+          <button mat-icon-button (click)="clearAmount()" [disabled]="amountValue === undefined" matTooltip="Delete value">
             <mat-icon>currency_exchange</mat-icon>
           </button>
         </div>
         <ng-container *ngFor="let item of currency">
           <span>{{ item }}</span>
           <mat-form-field appearance="outline" subscriptSizing="dynamic" class="content-currency">
-            <input matInput [value]="currencyMap.has(item) && currencyMap.get(item) !== undefined ? currencyMap.get(item) : 'нет данных'" readonly>
+            <input matInput [value]="currencyMap.has(item) && currencyMap.get(item) !== undefined ? currencyMap.get(item) : 'No data'" readonly>
             <mat-icon>{{ changeValueMap.get(item) > 0 ? 'expand_less' : changeValueMap.get(item) < 0 ? 'expand_more' : 0 }}</mat-icon>
-            <span>({{ changeValueMap.get(item) !== undefined ? changeValueMap.get(item) : '0.00' }})</span>
+            <span>({{ changeValueMap.get(item) !== undefined ? changeValueMap.get(item) : 0 }})</span>
           </mat-form-field>
         </ng-container>
       </div>

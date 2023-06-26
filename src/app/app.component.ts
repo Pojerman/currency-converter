@@ -33,28 +33,32 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getQuotes()
     setInterval(() => {
       if(this.amountValue === undefined) {
-        this.currencyService.getCurrencyValue(this.currency).subscribe((response:any) => {
-          this.currencyValue = response.quotes
-          this.getValue()
-        })
+        this.getQuotes()
       } else {
         this.converterValue()
       }
     }, 5000)
+  }
 
+  getQuotes() {
+    this.currencyService.getCurrencyValue(this.currency).subscribe((response:any) => {
+      this.currencyValue = response.quotes
+      this.getValue()
+    })
   }
 
   getValue() {
       this.currencyValue = Object.values(this.currencyValue)
       this.currency.map((el:string, idx:number) => {
         if(this.currencyMap.get(el)) {
-          this.changeValueMap.set(el, this.currencyMap.get(el) - this.currencyValue[idx])
+          this.changeValueMap.set(el, +(this.currencyValue[idx] - this.currencyMap.get(el)).toFixed(6))
         } else {
-          this.changeValueMap.set(el, 0)
+          this.changeValueMap.set(el, 0.00)
         }
-        this.currencyMap.set(el, this.currencyValue[idx])
+        this.currencyMap.set(el, +this.currencyValue[idx].toFixed(6))
       });
   }
 

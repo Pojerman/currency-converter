@@ -5,7 +5,7 @@ import {map} from "rxjs";
   providedIn: 'root',
 })
 export class CurrencyService {
-  private APIKEY = 'IGAeh29MjValwLES7YTERtCWnF32kEpD';
+  private APIKEY = 'zAOf2pI1Cf6Xh4DxYQCO4Vf6FqyvKWec';
   private API = 'https://api.apilayer.com/currency_data'
   private LIVE = '/live'
   private CONVERTER = '/convert'
