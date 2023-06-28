@@ -9,5 +9,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 - [Currency Data API](https://apilayer.com/marketplace/currency_data-api), if no data is received, it means that the number of requests has exceeded the maximum and you need to change the key
 
 ## Site
-[Currency converter](https://pojerman.github.io/currency-converter/) GitHub Pages
-[Currency converter](https://stackblitz.com/edit/kkky4x?file=README.md) StackBlitz
+- [Currency converter](https://pojerman.github.io/currency-converter/) GitHub Pages
+- [Currency converter](https://stackblitz.com/edit/kkky4x?file=README.md) StackBlitz
