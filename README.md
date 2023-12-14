@@ -11,3 +11,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 ## Site
 - [Currency converter](https://pojerman.github.io/currency-converter/) GitHub Pages
 - [Currency converter](https://stackblitz.com/edit/kkky4x?file=README.md) StackBlitz
+
+## Screen
+
+Currency Converter
+![](screen/screen1.jpg)
+
+Add value
+![](screen/screen2.jpg)
